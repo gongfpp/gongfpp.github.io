@@ -19,7 +19,7 @@
     <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/08/16/hello-world/index.html">
+<meta property="og:url" content="http://example.com/2022/08/16/hello-world">
 <meta property="og:site_name" content="Gongfpp&#39;s Web">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh_CN">
@@ -372,7 +372,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Hello World</div>
-      <div>http://example.com/2022/08/16/hello-world/</div>
+      <div>http://example.com/2022/08/16/hello-world</div>
     </div>
     <div class="license-meta">
       
@@ -414,7 +414,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/" title="第一篇测试博客">
+                      <a href="/2022/08/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2" title="第一篇测试博客">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">第一篇测试博客</span>
                         <span class="visible-mobile">上一篇</span>

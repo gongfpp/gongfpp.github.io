@@ -4,9 +4,41 @@
   
   
   <entry>
+    <title>MarkDown常用语法指南</title>
+    <link href="/2022/08/25/MarkDown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97"/>
+    <url>/2022/08/25/MarkDown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97</url>
+    
+    <content type="html"><![CDATA[<h1 id="MARKDOWN-常用语法-HTML扩展语法"><a href="#MARKDOWN-常用语法-HTML扩展语法" class="headerlink" title="MARKDOWN 常用语法 + HTML扩展语法"></a>MARKDOWN 常用语法 + HTML扩展语法</h1><p>两个空格后回车，<br>则换行</p><blockquote><p>我是引用</p></blockquote><p><code>printf(&quot;我是代码&quot;);</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>     System.out.println(<span class="hljs-string">&quot;我是java&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;我是python&quot;</span>)<br></code></pre></td></tr></table></figure><p><a href="http://www.baidu.com/">点击跳转至百度</a></p><p><img src="https://img-blog.csdnimg.cn/8b5321892a51473eaf2e2f6ef4273660.png" alt="图片"><br>注： 引用图片和链接的唯一区别就是在最前方添加一个感叹号。</p><ul><li>黄瓜</li><li>玉米</li><li>茄子</li></ul><ol><li>黄瓜</li><li>玉米</li><li>茄子</li></ol><ul><li><p>段落一 空四个空格<br>阿斯蒂芬阿斯蒂芬<br>小段一</p></li><li><p>段落二</p><p>小段二</p></li></ul><hr><p>这俩都是分隔符  </p><hr><table><thead><tr><th align="center">表头</th><th align="center">条目一</th><th align="center">条目二</th></tr></thead><tbody><tr><td align="center">项目</td><td align="center">项目一</td><td align="center">项目二</td></tr><tr><td align="center">啊 啊</td><td align="center">啊</td><td align="center">爱的色放</td></tr></tbody></table><p>我们可以设置表格的对齐方式：<br>-: 设置内容和标题栏居右对齐。<br>:- 设置内容和标题栏居左对齐。<br>:-: 设置内容和标题栏居中对齐。</p><blockquote><p>注：三个短斜杠左右的冒号用于控制对齐方式，只放置左边冒号表示文字居左，只放置右边冒号表示文字居右，如果两边都放置冒号表示文字居中。 <code>-</code>符号数量不影响</p></blockquote><p><font size="4" color="red">字体</font><br><font size="4" color="#1ffac"><u>下划线</u>字体</font></p><p><a href="http://tools.rockhwhuang.com/">放一个选色网站 十六进制 RGBA</a></p><p><font face="黑体">实现字体为黑体</font><br><small>比默认字体小一号</small><br>这里显示的是浏览器默认字体大小<br><font size=1>实现字体大小改变</font><br><big>比默认字体大一号</big><br><font color=red>实现字体颜色为红色</font><br><span style="background-color: orange">实现背景填充为橙色</span><br><font color=#FF69B4>颜色值用十六进制表示，实现字体颜色为“热情的粉红”</font><br><span style="background-color: #D3D3D3">颜色值用十六进制表示，实现背景填充为“浅灰色”</span><br><font face="黑体" size=4 color=red >实现字体效果：黑体、4号、红色</font><br><span style="background-color: #D3D3D3"><font size=4 color=#DC143C>默认字体，猩红色，4号，浅灰色填充</font></span></p><p>H<sub>2</sub>O<br>注册商标<sup>&amp;reg;</sup><br>(x<sub>1</sub>+x<sub>2</sub>)<sup>2</sup> &#x3D; x<sub>1</sub><sup>2</sup>+x<sub>2</sub><sup>2</sup>+2x<sub>1</sub>x<sub>2</sub></p><p>如果文本不是超链接，就不要<u>对其使用下划线</u>。</p><p>&amp;ensp;缩进&amp;emsp;缩进 </p><p><span style="text-decoration: overline;">RESET</span>是复位信号，输入低电平有效。</p><p>可以用<code>&lt;div&gt;</code>结合<code>align</code>控制图片居中对齐</p><div align="center"><img src="https://img-blog.csdnimg.cn/8b5321892a51473eaf2e2f6ef4273660.png" />图注1 图文无关</div>  <h2 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h2><table><thead><tr><th align="center">字符</th><th align="center">实体编号</th><th align="center">实体名称</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center">∀</td><td align="center"><code>&amp;#8704;</code></td><td align="center"><code>&amp;forall;</code></td><td align="center">for all</td></tr><tr><td align="center">∂</td><td align="center"><code>&amp;#8706;</code></td><td align="center"><code>&amp;part;</code></td><td align="center">part</td></tr><tr><td align="center">∃</td><td align="center"><code>&amp;#8707;</code></td><td align="center"><code>&amp;exist; </code></td><td align="center">exists</td></tr><tr><td align="center">∅</td><td align="center"><code>&amp;#8709;</code></td><td align="center"><code>&amp;empty; </code></td><td align="center">empty</td></tr><tr><td align="center">∇</td><td align="center"><code>&amp;#8711;</code></td><td align="center"><code>&amp;nabla; </code></td><td align="center">nabla</td></tr><tr><td align="center">∈</td><td align="center"><code>&amp;#8712;</code></td><td align="center"><code>&amp;isin;</code></td><td align="center">isin</td></tr><tr><td align="center">∉</td><td align="center"><code>&amp;#8713;</code></td><td align="center"><code>&amp;notin; </code></td><td align="center">notin</td></tr><tr><td align="center">∋</td><td align="center"><code>&amp;#8715;</code></td><td align="center"><code> &amp;ni; </code></td><td align="center">ni</td></tr><tr><td align="center">∏</td><td align="center"><code>&amp;#8719;</code></td><td align="center"><code>&amp;prod;</code></td><td align="center">prod</td></tr><tr><td align="center">∑</td><td align="center"><code>&amp;#8721;</code></td><td align="center"><code>&amp;sum; </code></td><td align="center">sum</td></tr></tbody></table><p>编号+ <code>&amp;#   ;</code> 如 <code>&amp;#9812;</code> :&amp;#9812;  或 <code>&amp;名字;</code> 如 <code>&amp;exist;</code>:&amp;exist;</p><p><a href="https://www.w3school.com.cn/charsets/ref_utf_symbols.asp">所有的杂项符号参考</a><br><a href="https://www.w3school.com.cn/charsets/ref_utf_arrows.asp">所有的箭头符号参考</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>markdown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LeetCodeHot100</title>
+    <link href="/2022/08/25/LeetCodeHot100"/>
+    <url>/2022/08/25/LeetCodeHot100</url>
+    
+    <content type="html"><![CDATA[<h1 id="咱今天来说说xxx"><a href="#咱今天来说说xxx" class="headerlink" title="咱今天来说说xxx"></a>咱今天来说说xxx</h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>第一篇测试博客</title>
-    <link href="/2022/08/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
-    <url>/2022/08/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</url>
+    <link href="/2022/08/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2"/>
+    <url>/2022/08/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2</url>
     
     <content type="html"><![CDATA[<h1 id="下班了-测完就吃饭"><a href="#下班了-测完就吃饭" class="headerlink" title="下班了 测完就吃饭!"></a>下班了 测完就吃饭!</h1><p>今天中午吃了糖醋鲤鱼</p>]]></content>
     
@@ -24,8 +56,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="/2022/08/16/hello-world/"/>
-    <url>/2022/08/16/hello-world/</url>
+    <link href="/2022/08/16/hello-world"/>
+    <url>/2022/08/16/hello-world</url>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
