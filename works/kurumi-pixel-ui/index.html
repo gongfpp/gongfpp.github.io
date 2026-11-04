@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>久留美 · 像素界面 · 城下秋草作品集</title>
+<meta name="description" content="粉色像素风交易界面实验，用本地模拟数据驱动全部交互。">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://gongfpp.icu/works/kurumi-pixel-ui/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="城下秋草作品集">
+<meta property="og:title" content="久留美 · 像素界面 · 城下秋草作品集">
+<meta property="og:description" content="粉色像素风交易界面实验，用本地模拟数据驱动全部交互。">
+<meta property="og:url" content="https://gongfpp.icu/works/kurumi-pixel-ui/">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">秋</span><span class="brand-name">城下秋草<em>作品集</em></span></a>
+    <nav class="nav-links">
+      <a href="/works/" class="on">作品</a>
+      <a href="/#about">关于</a>
+      <a href="/#opensource">开源</a>
+      <a href="/resume/">简历</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn-ghost" href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn-solid" href="mailto:massgong@outlook.com">联系我</a>
+    </div>
+  </div>
+</header>
+<main class="detail" id="main">
+  <div class="wrap">
+    <div class="crumb"><a href="/">首页</a><span>/</span><a href="/works/">全部作品</a><span>/</span>久留美 · 像素界面</div>
+    <div class="detail-layout">
+      <div>
+        <div class="d-kicker">前端与站点 / Frontend &amp; Web</div>
+        <h1>久留美 · 像素界面</h1>
+        <p class="d-lede">粉色像素风交易界面实验，用本地模拟数据驱动全部交互。</p>
+        <figure class="d-cover"><img data-zoom src="/assets/shots/kurumi-pixel-ui-1.webp" alt="久留米像素风界面组件库" loading="eager"></figure>
+        <p class="d-body">一次纯视觉与交互的练习：把交易终端的密度与像素风的粗糙感放在一起，所有数据本地模拟，不接真实行情。</p>
+        
+        <div class="d-sec-h">做了什么</div>
+        <ul class="d-points">
+          <li><span>像素字体与硬边描边体系，在深色底上重排版式</span></li>
+          <li><span>本地模拟数据驱动，动画与状态切换可完整演示</span></li>
+          <li><span>不依赖任何外部行情接口，离线可跑</span></li>
+        </ul>
+        <div class="d-sec-h">技术栈</div>
+        <div class="stack-tags"><span class="tag">HTML / CSS</span><span class="tag">像素美术</span><span class="tag">本地模拟数据</span></div>
+        <div class="d-acts">
+                    <a class="ghost" href="https://github.com/gongfpp/kurumi-pixel-ui" target="_blank" rel="noopener">查看仓库 →</a>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="side-head"><span>Detail</span><span>17</span></div>
+        <div class="row"><div class="row-k">年份</div><div class="row-v">2026</div></div>
+        <div class="row"><div class="row-k">类型</div><div class="row-v">前端与站点<small>Frontend &amp; Web</small></div></div>
+        <div class="row"><div class="row-k">语言</div><div class="row-v">HTML</div></div>
+        <div class="row"><div class="row-k">仓库</div><div class="row-v"><a href="https://github.com/gongfpp/kurumi-pixel-ui" target="_blank" rel="noopener" style="color:var(--accent)">kurumi-pixel-ui</a></div></div>
+        <div class="side-head"><span>同类作品</span><span>3</span></div>
+        <a class="side-link" href="/works/interface-atlas/"><span>界面图谱 Interface Atlas</span><em>14</em></a>
+        <a class="side-link" href="/works/poor-map/"><span>穷鬼地图</span><em>15</em></a>
+        <a class="side-link" href="/works/interface-atlas-web/"><span>界面图谱 · 构建产物</span><em>16</em></a>
+      </aside>
+    </div>
+    <div class="pager">
+      <a href="/works/interface-atlas-web/"><div class="pager-k">← 上一件</div><div class="pager-t">界面图谱 · 构建产物</div></a>
+      <a class="next" href="/works/chaoshi-2018/"><div class="pager-k">下一件 →</div><div class="pager-t">《超时》</div></a>
+    </div>
+  </div>
+</main>
+
+<div class="lb" id="lb" hidden>
+  <button class="lb-x" onclick="document.getElementById('lb').hidden=true;document.body.style.overflow=''">×</button>
+  <img alt="">
+  <div class="lb-cap"></div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb');
+  if(!lb) return;
+  var im=lb.querySelector('img'), cap=lb.querySelector('.lb-cap');
+  document.querySelectorAll('img[data-zoom]').forEach(function(el){
+    el.addEventListener('click',function(){
+      im.src=el.currentSrc||el.src; im.alt=el.alt; cap.textContent=el.alt;
+      lb.hidden=false; document.body.style.overflow='hidden';
+    });
+  });
+  lb.addEventListener('click',function(e){
+    if(e.target===im) return;
+    lb.hidden=true; document.body.style.overflow='';
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!lb.hidden){ lb.hidden=true; document.body.style.overflow=''; }
+  });
+})();
+</script>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      城下秋草作品集
+      <small>LYK · Java 后端工程师 · 华东地区</small>
+    </div>
+    <div class="footer-links">
+      <a href="/">首页</a>
+      <a href="/works/">全部作品</a>
+      <a href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:massgong@outlook.com">Email</a>
+    </div>
+  </div>
+  <div class="beian-bar">
+    <span>© 2026 城下秋草作品集 · gongfpp.icu</span>
+    <span class="beian-sep">/</span>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow">黔ICP备2026019686号</a>
+    <span class="beian-sep">/</span>
+    <span>本站为个人作品集，内容与所在单位无关</span>
+  </div>
+</footer>
+</body>
+</html>

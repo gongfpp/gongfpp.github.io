@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>简历 · 城下秋草作品集</title>
+<meta name="description" content="LYK 的在线简历：Java 后端工程师，某商业银行总行某研发部门，负责系统 A（额度管理平台）的研发、交付与稳定性。">
+<meta property="og:site_name" content="城下秋草作品集">
+<meta property="og:title" content="简历 · 城下秋草作品集">
+<meta property="og:description" content="Java 后端工程师 · 某商业银行总行某研发部门">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="https://gongfpp.icu/resume/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style>
+@font-face{font-family:'JetBrains Mono';src:url('/assets/fonts/jbmono-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('/assets/fonts/jbmono-500.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('/assets/fonts/jbmono-700.woff2') format('woff2');font-weight:700;font-display:swap}
+
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+
+/* ── 抬头 ── */
+.res-head{border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.res-head::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(to right,rgba(255,255,255,.028) 1px,transparent 1px),
+                   linear-gradient(to bottom,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:160px 160px}
+.res-head-in{position:relative;max-width:var(--max);margin:0 auto;padding:64px 40px 46px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:end}
+.res-name{font-size:64px;line-height:1;font-weight:700;letter-spacing:-.03em;margin-bottom:18px}
+.res-name em{font-style:normal;font-size:13px;font-family:var(--mono);letter-spacing:.22em;
+  color:var(--accent);vertical-align:super;margin-left:10px}
+.res-role{font-size:19px;font-weight:500;letter-spacing:-.01em;margin-bottom:12px}
+.res-role span{color:var(--accent)}
+.res-line{color:var(--muted);font-size:14.5px;line-height:1.75;max-width:34em;text-wrap:pretty}
+.res-meta{display:flex;flex-direction:column;gap:9px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.04em;color:var(--muted);text-align:right;min-width:190px}
+.res-meta a{color:var(--fg);border-bottom:1px solid var(--line-strong);padding-bottom:1px;transition:color .18s,border-color .18s}
+.res-meta a:hover{color:var(--accent);border-color:var(--accent)}
+.res-meta .k{color:var(--dim);margin-right:8px}
+
+/* ── 打印按钮 ── */
+.res-tools{max-width:var(--max);margin:0 auto;padding:20px 40px 0;display:flex;justify-content:flex-end;gap:10px}
+.btn-print{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--accent);
+  background:transparent;border:1px solid rgba(255,90,43,.4);padding:9px 16px;
+  display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.btn-print:hover{background:var(--accent);color:#0A0B0D}
+.btn-print svg{width:13px;height:13px}
+
+/* ── 正文 ── */
+.res{max-width:var(--max);margin:0 auto;padding:36px 40px 96px}
+.res-sec{padding:34px 0;border-top:1px solid var(--line);display:grid;
+  grid-template-columns:168px minmax(0,1fr);gap:40px}
+.res-sec:first-child{border-top:0;padding-top:14px}
+.res-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--accent);
+  text-transform:uppercase;padding-top:5px}
+.res-k small{display:block;color:var(--dim);letter-spacing:.1em;font-size:9.5px;margin-top:6px}
+.res-b{min-width:0}
+
+.res-item{margin-bottom:30px}
+.res-item:last-child{margin-bottom:0}
+.ri-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:5px}
+.ri-t{font-size:16.5px;font-weight:600;letter-spacing:-.01em}
+.ri-p{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--dim)}
+.ri-o{font-size:13px;color:var(--muted);margin-bottom:12px}
+.ri-ul{display:flex;flex-direction:column;gap:8px;list-style:none;padding-left:0;margin:0}
+.ri-ul li{position:relative;padding-left:15px;font-size:13.5px;line-height:1.75;color:#C6CBD1;text-wrap:pretty}
+.ri-ul li::before{content:'';position:absolute;left:0;top:.72em;width:5px;height:1px;background:var(--accent);opacity:.8}
+.ri-ul b{color:var(--fg);font-weight:600}
+
+/* 技术栈 */
+.stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.stack-item{background:var(--card);padding:16px 18px}
+.stack-k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;margin-bottom:8px}
+.stack-v{font-size:13px;line-height:1.85;color:#C6CBD1}
+.stack-v i{font-style:normal;color:var(--muted);font-size:11.5px;display:block;margin-top:2px}
+
+/* 开源 / 教育 */
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.mini-c{border:1px solid var(--line);background:var(--card);padding:18px 20px;transition:border-color .18s ease}
+.mini-c:hover{border-color:rgba(255,90,43,.45)}
+.mini-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:9px}
+.mini-t{font-size:14.5px;font-weight:600;margin-bottom:6px}
+.mini-p{font-size:12.5px;line-height:1.7;color:var(--muted);text-wrap:pretty}
+.mini-n{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--fg);letter-spacing:-.02em}
+.mini-n span{font-size:11px;color:var(--dim);font-weight:400;margin-left:4px;letter-spacing:0}
+
+@media (max-width:980px){.stack{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.stack{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){
+  .res-head-in{grid-template-columns:minmax(0,1fr);gap:26px;padding:44px 24px 34px}
+  .res-name{font-size:44px}
+  .res-meta{text-align:left;flex-direction:row;flex-wrap:wrap;gap:14px;min-width:0}
+  .res-tools{padding:16px 24px 0}
+  .res{padding:24px 24px 64px}
+  .res-sec{grid-template-columns:minmax(0,1fr);gap:14px;padding:26px 0}
+  .res-k{padding-top:0}
+}
+
+/* ── 打印 / 存 PDF：转成浅色纸面 ── */
+@media print{
+  :root{
+    --bg:#FFFFFF;--panel:#FFFFFF;--card:#FFFFFF;--fg:#111418;--muted:#4A4F55;
+    --dim:#6B7178;--line:rgba(0,0,0,.16);--line-strong:rgba(0,0,0,.32);--accent:#B23A12;
+  }
+  body{background:#fff!important;color:#111}
+  .nav,.res-tools,.footer-mark,.res-head::before{display:none!important}
+  .res-head-in{padding:0 0 14px}
+  .res-name{font-size:34pt;margin-bottom:8px}
+  .res-name em{color:#B23A12}
+  .res-role{font-size:11.5pt;margin-bottom:6px}
+  .res-line{font-size:9.5pt;color:#333}
+  .res{padding:0}
+  .res-sec{display:block;padding:5pt 0;break-inside:auto}
+  .res-k{font-size:7.5pt;margin-bottom:5pt;padding-top:0}
+  .res-k small{display:inline;margin-left:6pt;font-size:7pt}
+  .res-k{break-after:avoid;page-break-after:avoid}
+  .ri-t{break-after:avoid}
+  .stack{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mini{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .res-item{break-inside:avoid;margin-bottom:8pt}
+  .ri-top{margin-bottom:2pt}
+  .ri-t{font-size:10pt}
+  .ri-p,.ri-o{font-size:8pt;color:#555}
+  .ri-o{margin-bottom:6pt}
+  .ri-ul{gap:4pt}
+  .ri-ul li{font-size:8.7pt;line-height:1.45;color:#222}
+  .ri-ul{gap:3pt}
+  .ri-ul li::before{background:#B23A12}
+  .stack-item,.mini-c{background:#fff;border-color:#ccc;padding:6pt 7pt}
+  .stack,.mini{gap:0}
+  .stack-v,.mini-p{color:#222;font-size:8.2pt;line-height:1.45}
+  .stack-k,.mini-k{font-size:7.5pt;margin-bottom:4pt}
+  .mini-t{font-size:9.5pt;margin-bottom:3pt}
+  .mini-n{font-size:12pt}
+  .footer-top{padding:5pt 0 1pt}
+  .footer-links{display:none}
+  .footer{border-top:1px solid #ccc}
+  .beian-bar{border-top:0;padding:3pt 0 0;font-size:7.5pt;color:#666}
+  .beian-bar a{color:#666}
+  a{color:#111!important;text-decoration:none}
+  @page{margin:11mm 12mm}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">秋</span><span class="brand-name">城下秋草<em>作品集</em></span></a>
+    <nav class="nav-links">
+      <a href="/works/">作品</a>
+      <a href="/#about">关于</a>
+      <a href="/#opensource">开源</a>
+      <a href="/resume/">简历</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn-ghost" href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn-solid" href="mailto:massgong@outlook.com">联系我</a>
+    </div>
+  </div>
+</header>
+
+<header class="res-head">
+  <div class="res-head-in">
+    <div>
+      <h1 class="res-name">LYK<em>RESUME</em></h1>
+      <div class="res-role">Java 后端工程师 · <span>项目交付</span></div>
+      <p class="res-line">
+        在银行核心外围系统做了三年多：写服务、拆链路、定口径、守上线。习惯把不确定的东西先做成可观测、
+        可回滚、可复述的流程，再谈优化。
+      </p>
+    </div>
+    <div class="res-meta">
+      <div><span class="k">MAIL</span><a href="mailto:massgong@outlook.com">massgong@outlook.com</a></div>
+      <div><span class="k">GITHUB</span><a href="https://github.com/gongfpp" target="_blank" rel="noopener">github.com/gongfpp</a></div>
+      <div><span class="k">BASE</span>华东地区</div>
+      <div><span class="k">STATUS</span>在职 · 看机会</div>
+    </div>
+  </div>
+</header>
+
+<div class="res-tools no-print">
+  <button class="btn-print" type="button" onclick="window.print()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4V9h16v9h-2M8 14h8v7H8z"/></svg>
+    打印 / 存为 PDF
+  </button>
+</div>
+
+<main class="res" id="main">
+
+  <!-- 概要 -->
+  <section class="res-sec">
+    <div class="res-k">Summary<small>概要</small></div>
+    <div class="res-b">
+      <ul class="ri-ul" style="gap:10px">
+        <li><b>主业</b>：某商业银行总行某研发部门，负责系统 A（额度管理平台）的应用研发、T &amp; O 与日常巡检，覆盖千万级客户量级的额度口径。</li>
+        <li><b>擅长</b>：把一段跨系统的业务流程拆成可独立发布、可单独回滚的服务边界，并用核对机制把"两个系统说的不是同一件事"提前暴露在投产前。</li>
+        <li><b>交付</b>：承担版本上线前的巡检与投产值守，把常见异常沉淀成可执行预案；多家分支机构的协同问题多数在客户感知之前收口。</li>
+        <li><b>业余</b>：GitHub 上维护 34 个公开展示项目，Android 原生、macOS 菜单栏工具、前端站点与游戏原型都有完整落地的成品。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section class="res-sec">
+    <div class="res-k">Experience<small>工作经历</small></div>
+    <div class="res-b">
+
+      <article class="res-item">
+        <div class="ri-top">
+          <div class="ri-t">应用研发工程师 · 系统 A（额度管理平台）</div>
+          <div class="ri-p">2023.07 — 至今</div>
+        </div>
+        <div class="ri-o">某商业银行总行 · 某研发部门</div>
+        <ul class="ri-ul">
+          <li><b>链路拆分</b>：把额度申请、审批、调整、到期失效四段链路拆成可独立发布、可单独回滚的服务边界，单次变更的影响面从整条链路收敛到单段。</li>
+          <li><b>口径治理</b>：建立跨系统额度核对机制，用峰值取大与日切比对对齐两套数据源，把口径差异从"客户投诉后排查"前移到"投产前发现"。</li>
+          <li><b>上线守护</b>：负责版本上线前的指标巡检与投产值守，把历史异常整理成带判定条件的预案；日常巡检从人工翻页改为脚本取数 + 自动比对。</li>
+          <li><b>协同支撑</b>：对接多家分支机构的额度类问题，沉淀问题分类与排查路径，减少同一类问题的重复沟通。</li>
+        </ul>
+      </article>
+
+      <article class="res-item">
+        <div class="ri-top">
+          <div class="ri-t">后端开发 · 手机银行 App 移动端能力接入</div>
+          <div class="ri-p">2022 — 2023</div>
+        </div>
+        <div class="ri-o">手机银行渠道 / 接口层</div>
+        <ul class="ri-ul">
+          <li><b>接口契约</b>：承接移动端到核心系统的接口层，统一入参校验、错误码与幂等约束，渠道侧联调轮次明显减少。</li>
+          <li><b>性能治理</b>：针对高频查询加缓存、治理慢 SQL，把首屏依赖接口的响应稳定在可预期区间。</li>
+          <li><b>数据一致</b>：对涉及额度与账务的写操作补齐重试与对账路径，避免网络抖动演变成数据偏差。</li>
+        </ul>
+      </article>
+
+      <article class="res-item">
+        <div class="ri-top">
+          <div class="ri-t">上位机开发 · 设备通信与数据采集</div>
+          <div class="ri-p">2021 — 2022</div>
+        </div>
+        <div class="ri-o">PC 端上位机 / 串口通信</div>
+        <ul class="ri-ul">
+          <li><b>通信</b>：实现上位机与下位机的串口 / 网络协议解析，处理粘包、超时与断线重连。</li>
+          <li><b>存储</b>：设计采集数据的本地落盘与批量上报结构，保证长时间连续运行的写入稳定性。</li>
+          <li><b>呈现</b>：完成实时曲线与设备状态面板，现场人员不看日志也能判断设备是否正常。</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 代表项目 -->
+  <section class="res-sec">
+    <div class="res-k">Projects<small>代表项目</small></div>
+    <div class="res-b">
+
+      <article class="res-item">
+        <div class="ri-top">
+          <div class="ri-t">系统 A（额度管理平台）</div>
+          <div class="ri-p">核心 / 千万级客户</div>
+        </div>
+        <div class="ri-o">面向个人客户非柜面渠道的额度中枢，向下对接核心与账务，向上支撑手机银行、网银与线下渠道</div>
+        <ul class="ri-ul">
+          <li>难点不在单笔交易而在<b>口径一致</b>：同一客户在不同入口看到的额度必须是同一个数，因此把核对做成常驻能力而非一次性对账。</li>
+          <li>八个模块（申请 / 审批 / 调整 / 失效 / 核对 / 批量 / 巡检 / 审计）各自独立演进，用统一审计留痕串起全链路。</li>
+        </ul>
+      </article>
+
+      <article class="res-item">
+        <div class="ri-top">
+          <div class="ri-t">手机银行 App 能力接入</div>
+          <div class="ri-p">渠道 / 接口层</div>
+        </div>
+        <ul class="ri-ul">
+          <li>把核心能力翻译成移动端能稳定调用的接口：鉴权上下文、错误码、幂等约定三件套先定死，再做性能。</li>
+        </ul>
+      </article>
+
+      <article class="res-item">
+        <div class="ri-top">
+          <div class="ri-t">上位机数据采集</div>
+          <div class="ri-p">设备 / PC 端</div>
+        </div>
+        <ul class="ri-ul">
+          <li>串口协议解析 + 粘包处理 + 断线重连，采集落盘后批量上报；实时曲线用来判断设备状态而不是装饰界面。</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 技术栈 -->
+  <section class="res-sec">
+    <div class="res-k">Stack<small>技术栈</small></div>
+    <div class="res-b">
+      <div class="stack">
+        <div class="stack-item">
+          <div class="stack-k">Language</div>
+          <div class="stack-v">Java / SQL<i>日常主力</i></div>
+          <div class="stack-v" style="margin-top:10px">Kotlin · Swift · Python · Shell<i>项目与自动化</i></div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-k">Backend</div>
+          <div class="stack-v">Spring Boot / Spring MVC<i>服务开发与分层架构</i></div>
+          <div class="stack-v" style="margin-top:10px">接口契约 · 幂等 · 事务边界<i>跨系统集成</i></div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-k">Data</div>
+          <div class="stack-v">Oracle 建模与 SQL 调优<i>慢 SQL 治理、索引与执行计划</i></div>
+          <div class="stack-v" style="margin-top:10px">批量任务 · 对账 · 数据一致性<i>日切与峰值场景</i></div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-k">Frontend</div>
+          <div class="stack-v">HTML / CSS / 原生 JS<i>静态站点与阅读型页面</i></div>
+          <div class="stack-v" style="margin-top:10px">React · Jetpack Compose · SwiftUI<i>项目实践</i></div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-k">Ops</div>
+          <div class="stack-v">巡检脚本 · 指标核对 · 告警排查<i>Shell / Python 自动化</i></div>
+          <div class="stack-v" style="margin-top:10px">Git 分支与发布流程 · CI<i>构建与交付</i></div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-k">Practice</div>
+          <div class="stack-v">异常预案 · 回滚演练<i>上线前必做</i></div>
+          <div class="stack-v" style="margin-top:10px">容量评估 · 峰值保护<i>稳定性</i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育 + 开源 -->
+  <section class="res-sec">
+    <div class="res-k">More<small>教育 / 输出</small></div>
+    <div class="res-b">
+      <div class="mini">
+        <div class="mini-c">
+          <div class="mini-k">Education</div>
+          <div class="mini-t">计算机科学与技术 · 本科</div>
+          <p class="mini-p">科班出身，课程之外从 Qt 上位机、数据结构可视化一路做到今天的银行核心外围系统。</p>
+        </div>
+        <div class="mini-c">
+          <div class="mini-k">Open Source</div>
+          <div class="mini-n">35<span>个原创项目</span></div>
+          <p class="mini-p">Android 原生应用、macOS 菜单栏工具、前端站点与游戏原型，全部公开可读。 <a href="/works/" style="color:var(--accent);white-space:nowrap">全部作品 →</a></p>
+        </div>
+        <div class="mini-c">
+          <div class="mini-k">Reach</div>
+          <div class="mini-n">17.5<span>万+ 累计触达</span></div>
+          <p class="mini-p">CSDN 技术文章 12.4 万、GitHub 仓库 3.8 万、个人站点 1.3 万。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      LYK · 城下秋草作品集
+      <small>Java 后端工程师 · 华东地区</small>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://blog.csdn.net/gongfpp" target="_blank" rel="noopener">CSDN</a>
+      <a href="mailto:massgong@outlook.com">Email</a>
+      <a href="/works/">全部作品</a>
+      <a href="/">回到首页 ↑</a>
+    </div>
+  </div>
+  <div class="beian-bar">
+    <span>© 2026 LYK · gongfpp.icu</span>
+    <span class="beian-sep">/</span>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow">
+      <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.4-7 9-4-1.6-7-4.5-7-9V6z"/></svg>
+      黔ICP备2026019686号
+    </a>
+    <span class="beian-sep">/</span>
+    <span>本站为个人作品集，内容与所在单位无关</span>
+  </div>
+</footer>
+
+</body>
+</html>

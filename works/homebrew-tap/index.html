@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>homebrew-tap · 城下秋草作品集</title>
+<meta name="description" content="自建 Homebrew tap，让 macOS 工具走标准方式安装与升级。">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://gongfpp.icu/works/homebrew-tap/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="城下秋草作品集">
+<meta property="og:title" content="homebrew-tap · 城下秋草作品集">
+<meta property="og:description" content="自建 Homebrew tap，让 macOS 工具走标准方式安装与升级。">
+<meta property="og:url" content="https://gongfpp.icu/works/homebrew-tap/">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">秋</span><span class="brand-name">城下秋草<em>作品集</em></span></a>
+    <nav class="nav-links">
+      <a href="/works/" class="on">作品</a>
+      <a href="/#about">关于</a>
+      <a href="/#opensource">开源</a>
+      <a href="/resume/">简历</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn-ghost" href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn-solid" href="mailto:massgong@outlook.com">联系我</a>
+    </div>
+  </div>
+</header>
+<main class="detail" id="main">
+  <div class="wrap">
+    <div class="crumb"><a href="/">首页</a><span>/</span><a href="/works/">全部作品</a><span>/</span>homebrew-tap</div>
+    <div class="detail-layout">
+      <div>
+        <div class="d-kicker">工具与工程 / Tools &amp; Engineering</div>
+        <h1>homebrew-tap</h1>
+        <p class="d-lede">自建 Homebrew tap，让 macOS 工具走标准方式安装与升级。</p>
+        <figure class="d-cover"><img data-zoom src="/assets/shots/homebrew-tap-1.webp" alt="自建 Homebrew Tap，一条命令装到 Mac" loading="eager"></figure>
+        <p class="d-body">把自己写的 macOS 工具放进 Homebrew 的分发体系里：一条 brew 命令装好，升级也跟着 brew 走，不必手动下载 zip。</p>
+        
+        <div class="d-sec-h">做了什么</div>
+        <ul class="d-points">
+          <li><span>按 Homebrew 的 Formula 规范组织仓库结构与版本号</span></li>
+          <li><span>配合 release 产物做校验，避免分发到错误架构的包</span></li>
+          <li><span>用户侧安装、升级、卸载都回归标准命令</span></li>
+        </ul>
+        <div class="d-sec-h">技术栈</div>
+        <div class="stack-tags"><span class="tag">Ruby</span><span class="tag">Homebrew Formula</span><span class="tag">macOS 分发</span></div>
+        <div class="d-acts">
+                    <a class="ghost" href="https://github.com/gongfpp/homebrew-tap" target="_blank" rel="noopener">查看仓库 →</a>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="side-head"><span>Detail</span><span>10</span></div>
+        <div class="row"><div class="row-k">年份</div><div class="row-v">2026</div></div>
+        <div class="row"><div class="row-k">类型</div><div class="row-v">工具与工程<small>Tools &amp; Engineering</small></div></div>
+        <div class="row"><div class="row-k">语言</div><div class="row-v">Ruby</div></div>
+        <div class="row"><div class="row-k">仓库</div><div class="row-v"><a href="https://github.com/gongfpp/homebrew-tap" target="_blank" rel="noopener" style="color:var(--accent)">homebrew-tap</a></div></div>
+        <div class="side-head"><span>同类作品</span><span>3</span></div>
+        <a class="side-link" href="/works/mediagrab/"><span>MediaGrab</span><em>06</em></a>
+        <a class="side-link" href="/works/aki-agent-kit/"><span>aki-agent-kit</span><em>08</em></a>
+        <a class="side-link" href="/works/agent-handoff/"><span>AgentHandoff</span><em>09</em></a>
+      </aside>
+    </div>
+    <div class="pager">
+      <a href="/works/agent-handoff/"><div class="pager-k">← 上一件</div><div class="pager-t">AgentHandoff</div></a>
+      <a class="next" href="/works/config-reviewer-builds/"><div class="pager-k">下一件 →</div><div class="pager-t">配置评审台 · 构建产物</div></a>
+    </div>
+  </div>
+</main>
+
+<div class="lb" id="lb" hidden>
+  <button class="lb-x" onclick="document.getElementById('lb').hidden=true;document.body.style.overflow=''">×</button>
+  <img alt="">
+  <div class="lb-cap"></div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb');
+  if(!lb) return;
+  var im=lb.querySelector('img'), cap=lb.querySelector('.lb-cap');
+  document.querySelectorAll('img[data-zoom]').forEach(function(el){
+    el.addEventListener('click',function(){
+      im.src=el.currentSrc||el.src; im.alt=el.alt; cap.textContent=el.alt;
+      lb.hidden=false; document.body.style.overflow='hidden';
+    });
+  });
+  lb.addEventListener('click',function(e){
+    if(e.target===im) return;
+    lb.hidden=true; document.body.style.overflow='';
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!lb.hidden){ lb.hidden=true; document.body.style.overflow=''; }
+  });
+})();
+</script>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      城下秋草作品集
+      <small>LYK · Java 后端工程师 · 华东地区</small>
+    </div>
+    <div class="footer-links">
+      <a href="/">首页</a>
+      <a href="/works/">全部作品</a>
+      <a href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:massgong@outlook.com">Email</a>
+    </div>
+  </div>
+  <div class="beian-bar">
+    <span>© 2026 城下秋草作品集 · gongfpp.icu</span>
+    <span class="beian-sep">/</span>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow">黔ICP备2026019686号</a>
+    <span class="beian-sep">/</span>
+    <span>本站为个人作品集，内容与所在单位无关</span>
+  </div>
+</footer>
+</body>
+</html>

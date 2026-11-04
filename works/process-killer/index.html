@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProcessKiller · 城下秋草作品集</title>
+<meta name="description" content="Qt 写的 GUI 进程管理器，列出进程并按需结束。">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://gongfpp.icu/works/process-killer/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="城下秋草作品集">
+<meta property="og:title" content="ProcessKiller · 城下秋草作品集">
+<meta property="og:description" content="Qt 写的 GUI 进程管理器，列出进程并按需结束。">
+<meta property="og:url" content="https://gongfpp.icu/works/process-killer/">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">秋</span><span class="brand-name">城下秋草<em>作品集</em></span></a>
+    <nav class="nav-links">
+      <a href="/works/" class="on">作品</a>
+      <a href="/#about">关于</a>
+      <a href="/#opensource">开源</a>
+      <a href="/resume/">简历</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn-ghost" href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn-solid" href="mailto:massgong@outlook.com">联系我</a>
+    </div>
+  </div>
+</header>
+<main class="detail" id="main">
+  <div class="wrap">
+    <div class="crumb"><a href="/">首页</a><span>/</span><a href="/works/">全部作品</a><span>/</span>ProcessKiller</div>
+    <div class="detail-layout">
+      <div>
+        <div class="d-kicker">早期作品 / Early Works</div>
+        <h1>ProcessKiller</h1>
+        <p class="d-lede">Qt 写的 GUI 进程管理器，列出进程并按需结束。</p>
+        <figure class="d-cover"><img data-zoom src="/assets/shots/process-killer-1.webp" alt="进程列表：按内存排序，一键结束" loading="eager"></figure>
+        <p class="d-body">把任务管理器最常用的两件事单独拎出来：看清当前进程，然后结束它。界面极简，操作路径最短。</p>
+        
+        <div class="d-sec-h">做了什么</div>
+        <ul class="d-points">
+          <li><span>枚举系统进程并展示关键字段</span></li>
+          <li><span>支持选中后直接结束进程</span></li>
+          <li><span>Qt 界面刷新与系统调用分离</span></li>
+        </ul>
+        <div class="d-sec-h">技术栈</div>
+        <div class="stack-tags"><span class="tag">C++</span><span class="tag">Qt</span><span class="tag">系统调用</span></div>
+        <div class="d-acts">
+                    <a class="ghost" href="https://github.com/gongfpp/ProcessKiller" target="_blank" rel="noopener">查看仓库 →</a>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="side-head"><span>Detail</span><span>33</span></div>
+        <div class="row"><div class="row-k">年份</div><div class="row-v">2021</div></div>
+        <div class="row"><div class="row-k">类型</div><div class="row-v">早期作品<small>Early Works</small></div></div>
+        <div class="row"><div class="row-k">语言</div><div class="row-v">C++</div></div>
+        <div class="row"><div class="row-k">仓库</div><div class="row-v"><a href="https://github.com/gongfpp/ProcessKiller" target="_blank" rel="noopener" style="color:var(--accent)">ProcessKiller</a></div></div>
+        <div class="side-head"><span>同类作品</span><span>3</span></div>
+        <a class="side-link" href="/works/caculator-with-qt/"><span>Qt 图形计算器</span><em>31</em></a>
+        <a class="side-link" href="/works/binary-tree-with-qt/"><span>Qt 二叉树可视化</span><em>32</em></a>
+        <a class="side-link" href="/works/sorts-with-qt/"><span>排序算法对比</span><em>34</em></a>
+      </aside>
+    </div>
+    <div class="pager">
+      <a href="/works/binary-tree-with-qt/"><div class="pager-k">← 上一件</div><div class="pager-t">Qt 二叉树可视化</div></a>
+      <a class="next" href="/works/sorts-with-qt/"><div class="pager-k">下一件 →</div><div class="pager-t">排序算法对比</div></a>
+    </div>
+  </div>
+</main>
+
+<div class="lb" id="lb" hidden>
+  <button class="lb-x" onclick="document.getElementById('lb').hidden=true;document.body.style.overflow=''">×</button>
+  <img alt="">
+  <div class="lb-cap"></div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb');
+  if(!lb) return;
+  var im=lb.querySelector('img'), cap=lb.querySelector('.lb-cap');
+  document.querySelectorAll('img[data-zoom]').forEach(function(el){
+    el.addEventListener('click',function(){
+      im.src=el.currentSrc||el.src; im.alt=el.alt; cap.textContent=el.alt;
+      lb.hidden=false; document.body.style.overflow='hidden';
+    });
+  });
+  lb.addEventListener('click',function(e){
+    if(e.target===im) return;
+    lb.hidden=true; document.body.style.overflow='';
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!lb.hidden){ lb.hidden=true; document.body.style.overflow=''; }
+  });
+})();
+</script>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      城下秋草作品集
+      <small>LYK · Java 后端工程师 · 华东地区</small>
+    </div>
+    <div class="footer-links">
+      <a href="/">首页</a>
+      <a href="/works/">全部作品</a>
+      <a href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:massgong@outlook.com">Email</a>
+    </div>
+  </div>
+  <div class="beian-bar">
+    <span>© 2026 城下秋草作品集 · gongfpp.icu</span>
+    <span class="beian-sep">/</span>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow">黔ICP备2026019686号</a>
+    <span class="beian-sep">/</span>
+    <span>本站为个人作品集，内容与所在单位无关</span>
+  </div>
+</footer>
+</body>
+</html>

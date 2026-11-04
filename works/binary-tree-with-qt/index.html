@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qt 二叉树可视化 · 城下秋草作品集</title>
+<meta name="description" content="用 Qt 把二叉树的插入、删除与遍历过程画出来，3 star。">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://gongfpp.icu/works/binary-tree-with-qt/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="城下秋草作品集">
+<meta property="og:title" content="Qt 二叉树可视化 · 城下秋草作品集">
+<meta property="og:description" content="用 Qt 把二叉树的插入、删除与遍历过程画出来，3 star。">
+<meta property="og:url" content="https://gongfpp.icu/works/binary-tree-with-qt/">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">秋</span><span class="brand-name">城下秋草<em>作品集</em></span></a>
+    <nav class="nav-links">
+      <a href="/works/" class="on">作品</a>
+      <a href="/#about">关于</a>
+      <a href="/#opensource">开源</a>
+      <a href="/resume/">简历</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn-ghost" href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn-solid" href="mailto:massgong@outlook.com">联系我</a>
+    </div>
+  </div>
+</header>
+<main class="detail" id="main">
+  <div class="wrap">
+    <div class="crumb"><a href="/">首页</a><span>/</span><a href="/works/">全部作品</a><span>/</span>Qt 二叉树可视化</div>
+    <div class="detail-layout">
+      <div>
+        <div class="d-kicker">早期作品 / Early Works</div>
+        <h1>Qt 二叉树可视化</h1>
+        <p class="d-lede">用 Qt 把二叉树的插入、删除与遍历过程画出来，3 star。</p>
+        <figure class="d-cover"><img data-zoom src="/assets/shots/binary-tree-with-qt-1.webp" alt="Qt 二叉树可视化" loading="eager"></figure>
+        <p class="d-body">数据结构课的延伸：不只是实现树，而是把每一步结构变化渲染成可见的过程，方便对照理解。</p>
+        
+        <div class="d-sec-h">做了什么</div>
+        <ul class="d-points">
+          <li><span>树的插入、删除、前中后序遍历逐步可视化</span></li>
+          <li><span>节点坐标按层级自动布局，避免连线交叉</span></li>
+          <li><span>Qt 绘图事件驱动重绘</span></li>
+        </ul>
+        <div class="d-sec-h">技术栈</div>
+        <div class="stack-tags"><span class="tag">C++</span><span class="tag">Qt</span><span class="tag">数据结构可视化</span></div>
+        <div class="d-acts">
+                    <a class="ghost" href="https://github.com/gongfpp/BinaryTreeWithQt" target="_blank" rel="noopener">查看仓库 →</a>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="side-head"><span>Detail</span><span>32</span></div>
+        <div class="row"><div class="row-k">年份</div><div class="row-v">2021</div></div>
+        <div class="row"><div class="row-k">类型</div><div class="row-v">早期作品<small>Early Works</small></div></div>
+        <div class="row"><div class="row-k">语言</div><div class="row-v">C++</div></div>
+        <div class="row"><div class="row-k">仓库</div><div class="row-v"><a href="https://github.com/gongfpp/BinaryTreeWithQt" target="_blank" rel="noopener" style="color:var(--accent)">BinaryTreeWithQt</a></div></div>
+        <div class="side-head"><span>同类作品</span><span>3</span></div>
+        <a class="side-link" href="/works/caculator-with-qt/"><span>Qt 图形计算器</span><em>31</em></a>
+        <a class="side-link" href="/works/process-killer/"><span>ProcessKiller</span><em>33</em></a>
+        <a class="side-link" href="/works/sorts-with-qt/"><span>排序算法对比</span><em>34</em></a>
+      </aside>
+    </div>
+    <div class="pager">
+      <a href="/works/caculator-with-qt/"><div class="pager-k">← 上一件</div><div class="pager-t">Qt 图形计算器</div></a>
+      <a class="next" href="/works/process-killer/"><div class="pager-k">下一件 →</div><div class="pager-t">ProcessKiller</div></a>
+    </div>
+  </div>
+</main>
+
+<div class="lb" id="lb" hidden>
+  <button class="lb-x" onclick="document.getElementById('lb').hidden=true;document.body.style.overflow=''">×</button>
+  <img alt="">
+  <div class="lb-cap"></div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb');
+  if(!lb) return;
+  var im=lb.querySelector('img'), cap=lb.querySelector('.lb-cap');
+  document.querySelectorAll('img[data-zoom]').forEach(function(el){
+    el.addEventListener('click',function(){
+      im.src=el.currentSrc||el.src; im.alt=el.alt; cap.textContent=el.alt;
+      lb.hidden=false; document.body.style.overflow='hidden';
+    });
+  });
+  lb.addEventListener('click',function(e){
+    if(e.target===im) return;
+    lb.hidden=true; document.body.style.overflow='';
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!lb.hidden){ lb.hidden=true; document.body.style.overflow=''; }
+  });
+})();
+</script>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      城下秋草作品集
+      <small>LYK · Java 后端工程师 · 华东地区</small>
+    </div>
+    <div class="footer-links">
+      <a href="/">首页</a>
+      <a href="/works/">全部作品</a>
+      <a href="https://github.com/gongfpp" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:massgong@outlook.com">Email</a>
+    </div>
+  </div>
+  <div class="beian-bar">
+    <span>© 2026 城下秋草作品集 · gongfpp.icu</span>
+    <span class="beian-sep">/</span>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow">黔ICP备2026019686号</a>
+    <span class="beian-sep">/</span>
+    <span>本站为个人作品集，内容与所在单位无关</span>
+  </div>
+</footer>
+</body>
+</html>
