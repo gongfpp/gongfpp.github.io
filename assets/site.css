@@ -218,3 +218,5 @@ h1,h2,h3,h4,p{margin:0}
 .side-link:hover{color:var(--accent);background:rgba(255,90,43,.04)}
 .side-link em{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.12em;flex:none}
 .pager span{display:block}
+
+.site-visitor-count { color: #888; font-size: 11px; line-height: 1.5; text-align: center; margin: 10px 20px 0; }
